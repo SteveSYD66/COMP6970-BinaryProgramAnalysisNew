@@ -1,16 +1,29 @@
-# This is a sample Python script.
+# Python imports
+import pefile
+import argparse
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+# Project imports
+from reader import Reader
+
+def main():
+    """
+    Main Method
+
+    Launch the disassembler from this method
+    :return: Currently none
+    """
+
+    print("-------------------------------------------\n"
+          "COMP 6970 Binary Program Analysis Project\n"
+          "Project: Disassembler\n"
+          "Authors:\n"
+          "Mukarram Ali Faridi\n"
+          "Yuantai Pan\n"
+          "-------------------------------------------\n")
+    print("testing with a test file \"text.txt\t\n")
+
+    file_reader = Reader("test_code/text.txt")
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+if __name__ == "__main__":
+    main()
