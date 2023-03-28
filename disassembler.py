@@ -84,6 +84,14 @@ class Disassembler:
         return disasm
 
     def predict(self, code_prdt: bytes):
+        """
+        predict
+
+        give the prediction of the binary's byte length by looking at the top of the text section
+        examine the legacy prefixes and opcode extensions to make predection
+        :param code_prdt: the text section of program
+        :return: length:an int variable that represents the prediction
+        """
         length = 0
         # check for single byte instructions
         if code_prdt[0] == 0x90:

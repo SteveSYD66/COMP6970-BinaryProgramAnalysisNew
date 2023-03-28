@@ -28,10 +28,8 @@ def main():
     print("testing with a test file \"hello.exe\t\n")
 
     file_reader = Reader("test_code/hello.exe")
-    # file_reader.header_info()
+    file_reader.header_info()
     text = file_reader.extract_data()
-    with open("test_code/hello.exe", "rb") as f:
-        data = f.read()
     disassembler = Disassembler()
     print("Disassembling with capstone:\n")
     disassembler.disassemble_capstone(text)
