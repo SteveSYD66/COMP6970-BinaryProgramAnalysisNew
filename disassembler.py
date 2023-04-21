@@ -12,6 +12,10 @@ class Disassembler:
         self.md = Cs(CS_ARCH_X86, CS_MODE_32)
         self.instr_list = []
 
+    def is_branch_instr(self, instr):
+        mnemonic = instr.mnemonic
+        return mnemonic.startswith("j") or mnemonic.startswith("call") or mnemonic.startswith("ret")
+
     def disassemble(self, code: bytes):
         """
         disassemble
@@ -21,6 +25,9 @@ class Disassembler:
         :param code: input binary code in bytes format
         :return: gives no return, the output is stored in instr_list
         """
+        # write linear sweep disassembly to a file
+        f = open("output/linearsweep_disassembly.txt", "w")
+
         # initialize byte offset and default address
         offset = 0
         address = 0x1000
@@ -41,8 +48,8 @@ class Disassembler:
             # use the second output to generate a valid output
             while not_disassembled:
                 # if size > INSTR_MAX:
-                    # not_disassembled = False
-                    # break
+                # not_disassembled = False
+                # break
                 try:
                     # this line of instruction can be potentially replaced with a self-made disasm() function
                     output_instr = list(self.md.disasm(target, address))
@@ -61,14 +68,18 @@ class Disassembler:
                     target = code[offset:size + offset]
             # append disassembled instruction into instruction list
             if len(output_instr) > 0:
-                for i in output_instr:
-                    new_instr = Instruction(i.address, i.mnemonic, i.op_str)
-                    self.instr_list.append(i)
-                    new_instr.print()
+                for instr in output_instr:
+                    new_instr = Instruction(
+                        instr.address, instr.mnemonic, size, instr.op_str)
+                    self.instr_list.append(instr)
+                    f.write(new_instr.str() + "\n")
+                    #new_instr.print()
                 offset += size
                 address += size
-            if address == 0x3b8f:
-                flag = True
+            # if address == 0x3b8f:
+            #    flag = True
+
+        f.close()
 
     def disassemble_capstone(self, code_cap: bytes):
         """
@@ -78,9 +89,18 @@ class Disassembler:
         :param code_cap: input binary code
         :return: print of disassembled code
         """
+        # write capstone disassembly to a file
+        f = open("output/capstone_disassembly.txt", "w")
+
         disasm = self.md.disasm(code_cap, 0x1000)
         for i in disasm:
-            print("0x%x:\t%s\t%s" % (i.address, i.mnemonic, i.op_str))
+            capstone_instr = "0x%x:\t%s\t%s" % (
+                i.address, i.mnemonic, i.op_str)
+            f.write(capstone_instr + "\n")
+            #print(capstone_instr)
+
+        f.close()
+
         return disasm
 
     def predict(self, code_prdt: bytes):
