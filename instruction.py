@@ -14,7 +14,7 @@ class Instruction:
         self.size = size
 
     def str(self):
-        return "0x%x:\t%s\t%s" % (self.address, self.mnemonic, self.op_str)
+        return "0x%04x:\t%-4s\t%s" % (self.address, self.mnemonic, self.op_str)
 
     def print(self):
-        print("0x%x:\t%s\t%s" % (self.address, self.mnemonic, self.op_str))
+        print("0x%04x:\t%-4s\t%s" % (self.address, self.mnemonic, self.op_str))

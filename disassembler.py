@@ -69,8 +69,7 @@ class Disassembler:
             # append disassembled instruction into instruction list
             if len(output_instr) > 0:
                 for instr in output_instr:
-                    new_instr = Instruction(
-                        instr.address, instr.mnemonic, size, instr.op_str)
+                    new_instr = Instruction(instr.address, instr.mnemonic, size, instr.op_str)
                     self.instr_list.append(instr)
                     f.write(new_instr.str() + "\n")
                     #new_instr.print()
@@ -94,8 +93,7 @@ class Disassembler:
 
         disasm = self.md.disasm(code_cap, 0x1000)
         for i in disasm:
-            capstone_instr = "0x%x:\t%s\t%s" % (
-                i.address, i.mnemonic, i.op_str)
+            capstone_instr = "0x%x:\t%s\t%s" % (i.address, i.mnemonic, i.op_str)
             f.write(capstone_instr + "\n")
             #print(capstone_instr)
 
