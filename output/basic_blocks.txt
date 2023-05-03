@@ -1,3 +1,4 @@
+Number of basic blocks: 28
 Basic Block 0: 0x1000 - 0x1000
 	Instructions: ['0x1000']
 	Instructions: ['ret']

@@ -43,9 +43,9 @@ class BasicBlockGenerator:
         for basic_block in basic_blocks:
             if (instr != basic_block.start_instr and
                 instr in basic_block.bb_instr_list):
-                #return True
+                # return True
                 return basic_block
-        #return False
+        # return False
         return None
     
     def basic_block_already_exists(self, basic_blocks, start_instr):
@@ -197,6 +197,8 @@ class BasicBlockGenerator:
                 if addr == next_instr_addr:
                     if next_instr_addr in self.next_instr_addr_list:
                         self.next_instr_addr_list.remove(next_instr_addr)
+                    if next_instr_addr in self.return_addr_list:
+                        self.return_addr_list.remove(next_instr_addr)
                         
                     if self.basic_block_already_exists(self.basic_blocks, next_instr):
                         if self.next_instr_addr_list:
@@ -207,7 +209,10 @@ class BasicBlockGenerator:
 
                 elif addr == jump_to_addr:
                     if self.basic_block_already_exists(self.basic_blocks, next_instr):
-                        self.next_instr_addr_list.remove(next_instr_addr)
+                        if next_instr_addr in self.next_instr_addr_list:
+                            self.next_instr_addr_list.remove(next_instr_addr)
+                        if next_instr_addr in self.return_addr_list:
+                            self.return_addr_list.remove(next_instr_addr)
                 
                 self.basic_blocks.append(current_bb)
 
@@ -262,6 +267,8 @@ class BasicBlockGenerator:
     
     def display_basic_blocks(self, basic_blocks):
         f = open("output/basic_blocks.txt", "w")
+        f.write("Number of basic blocks: %d" % len(self.basic_blocks))
+        f.write("\n")
 
         for i, bb in enumerate(basic_blocks):
             f.write(f"Basic Block {i}: {hex(bb.start_instr.address)} - {hex(bb.end_instr.address)}\n")
@@ -270,9 +277,9 @@ class BasicBlockGenerator:
             f.write(f"\tNext Instructions: {[hex(instr.address) for instr in bb.bb_next_instrs]}\n")
             f.write("\n")
 
-            #print()
-            #print(f"Basic Block {i}: {hex(bb.start_instr.address)} - {hex(bb.end_instr.address)}")
-            #print(f"\tInstructions: {[instr.mnemonic for instr in bb.bb_instr_list]}")
-            #print(f"\tNext Instructions: {[hex(instr.address) for instr in bb.bb_next_instrs]}")
+            print()
+            print(f"Basic Block {i}: {hex(bb.start_instr.address)} - {hex(bb.end_instr.address)}")
+            print(f"\tInstructions: {[instr.mnemonic for instr in bb.bb_instr_list]}")
+            print(f"\tNext Instructions: {[hex(instr.address) for instr in bb.bb_next_instrs]}")
 
         f.close()
