@@ -1,0 +1,141 @@
+Number of basic blocks: 28
+Basic Block 0: 0x1000 - 0x1000
+	Instructions: ['0x1000']
+	Instructions: ['ret']
+	Next Instructions: []
+
+Basic Block 1: 0x1001 - 0x1049
+	Instructions: ['0x1001', '0x100c', '0x1010', '0x1011', '0x1014', '0x1015', '0x101b', '0x101d', '0x1023', '0x1024', '0x102a', '0x1030', '0x1031', '0x1037', '0x103d', '0x103e', '0x1044', '0x1049']
+	Instructions: ['nop', 'nop', 'dec', 'sub', 'dec', 'mov', 'xor', 'mov', 'dec', 'mov', 'mov', 'dec', 'mov', 'mov', 'dec', 'mov', 'cmp', 'jne']
+	Next Instructions: ['0x105a', '0x104b']
+
+Basic Block 2: 0x105a - 0x106b
+	Instructions: ['0x105a', '0x105b', '0x1061', '0x1067', '0x1069', '0x106b']
+	Instructions: ['dec', 'mov', 'mov', 'mov', 'test', 'je']
+	Next Instructions: ['0x10b0', '0x106d']
+
+Basic Block 3: 0x10b0 - 0x10b5
+	Instructions: ['0x10b0', '0x10b5']
+	Instructions: ['mov', 'call']
+	Next Instructions: []
+
+Basic Block 4: 0x10ba - 0x10ba
+	Instructions: ['0x10ba']
+	Instructions: ['jmp']
+	Next Instructions: ['0x1077']
+
+Basic Block 5: 0x1077 - 0x1077
+	Instructions: ['0x1077']
+	Instructions: ['call']
+	Next Instructions: []
+
+Basic Block 6: 0x107c - 0x1087
+	Instructions: ['0x107c', '0x107d', '0x1083', '0x1085', '0x1087']
+	Instructions: ['dec', 'mov', 'mov', 'mov', 'call']
+	Next Instructions: []
+
+Basic Block 7: 0x108c - 0x1097
+	Instructions: ['0x108c', '0x108d', '0x1093', '0x1095', '0x1097']
+	Instructions: ['dec', 'mov', 'mov', 'mov', 'call']
+	Next Instructions: []
+
+Basic Block 8: 0x109c - 0x10a6
+	Instructions: ['0x109c', '0x109d', '0x10a3', '0x10a6']
+	Instructions: ['dec', 'mov', 'cmp', 'je']
+	Next Instructions: ['0x10f8', '0x10a8']
+
+Basic Block 9: 0x10f8 - 0x10ff
+	Instructions: ['0x10f8', '0x10f9', '0x10ff']
+	Instructions: ['dec', 'mov', 'call']
+	Next Instructions: []
+
+Basic Block 10: 0x1104 - 0x110a
+	Instructions: ['0x1104', '0x1106', '0x1107', '0x110a']
+	Instructions: ['xor', 'dec', 'add', 'ret']
+	Next Instructions: []
+
+Basic Block 11: 0x110b - 0x1114
+	Instructions: ['0x110b', '0x1110', '0x1114']
+	Instructions: ['nop', 'cmp', 'jbe']
+	Next Instructions: ['0x105a', '0x111a']
+
+Basic Block 12: 0x111a - 0x1129
+	Instructions: ['0x111a', '0x111b', '0x1121', '0x1123', '0x1124', '0x1126', '0x1129']
+	Instructions: ['inc', 'mov', 'xor', 'inc', 'test', 'setne', 'jmp']
+	Next Instructions: ['0x105a']
+
+Basic Block 13: 0x112e - 0x116e
+	Instructions: ['0x112e', '0x1130', '0x1131', '0x1134', '0x1135', '0x113b', '0x113c', '0x1142', '0x1143', '0x1149', '0x114a', '0x1150', '0x1152', '0x1158', '0x1159', '0x115f', '0x1160', '0x1162', '0x1163', '0x1169', '0x116a', '0x116e']
+	Instructions: ['nop', 'dec', 'sub', 'dec', 'mov', 'dec', 'lea', 'dec', 'lea', 'dec', 'lea', 'mov', 'mov', 'dec', 'mov', 'inc', 'mov', 'dec', 'lea', 'dec', 'mov', 'call']
+	Next Instructions: []
+
+Basic Block 14: 0x1173 - 0x1178
+	Instructions: ['0x1173', '0x1174', '0x1175', '0x1178']
+	Instructions: ['nop', 'dec', 'add', 'ret']
+	Next Instructions: []
+
+Basic Block 15: 0x1179 - 0x11a7
+	Instructions: ['0x1179', '0x1180', '0x1181', '0x1182', '0x1183', '0x1184', '0x1185', '0x1186', '0x1187', '0x118a', '0x118b', '0x1191', '0x1192', '0x1198', '0x119a', '0x119c', '0x11a3', '0x11a4', '0x11a7']
+	Instructions: ['nop', 'inc', 'push', 'push', 'push', 'push', 'push', 'dec', 'sub', 'dec', 'mov', 'dec', 'mov', 'xor', 'dec', 'mov', 'dec', 'mov', 'jmp']
+	Next Instructions: ['0x11c0']
+
+Basic Block 16: 0x11c0 - 0x11c1
+	Instructions: ['0x11c0', '0x11c1']
+	Instructions: ['dec', 'mov']
+	Next Instructions: []
+
+Basic Block 17: 0x104b - 0x1058
+	Instructions: ['0x104b', '0x104c', '0x104f', '0x1050', '0x1052', '0x1058']
+	Instructions: ['dec', 'arpl', 'dec', 'add', 'cmp', 'je']
+	Next Instructions: ['0x10c0', '0x105a']
+
+Basic Block 18: 0x110b - 0x110b
+	Instructions: ['0x110b']
+	Instructions: ['nop']
+	Next Instructions: ['0x1110']
+
+Basic Block 19: 0x1110 - 0x1114
+	Instructions: ['0x1110', '0x1114']
+	Instructions: ['cmp', 'jbe']
+	Next Instructions: ['0x105a', '0x111a']
+
+Basic Block 20: 0x10c0 - 0x10c9
+	Instructions: ['0x10c0', '0x10c4', '0x10c9']
+	Instructions: ['movzx', 'cmp', 'je']
+	Next Instructions: ['0x1110', '0x10cb']
+
+Basic Block 21: 0x10cb - 0x10d0
+	Instructions: ['0x10cb', '0x10d0']
+	Instructions: ['cmp', 'jne']
+	Next Instructions: ['0x105a', '0x10d2']
+
+Basic Block 22: 0x10d2 - 0x10d9
+	Instructions: ['0x10d2', '0x10d9']
+	Instructions: ['cmp', 'jbe']
+	Next Instructions: ['0x105a', '0x10df']
+
+Basic Block 23: 0x10df - 0x10ec
+	Instructions: ['0x10df', '0x10e5', '0x10e7', '0x10e9', '0x10ec']
+	Instructions: ['mov', 'xor', 'test', 'setne', 'jmp']
+	Next Instructions: ['0x105a']
+
+Basic Block 24: 0x10f1 - 0x10f1
+	Instructions: ['0x10f1']
+	Instructions: ['nop']
+	Next Instructions: []
+
+Basic Block 25: 0x106d - 0x1072
+	Instructions: ['0x106d', '0x1072']
+	Instructions: ['mov', 'call']
+	Next Instructions: []
+
+Basic Block 26: 0x10a8 - 0x10ae
+	Instructions: ['0x10a8', '0x10aa', '0x10ab', '0x10ae']
+	Instructions: ['xor', 'dec', 'add', 'ret']
+	Next Instructions: []
+
+Basic Block 27: 0x10af - 0x10af
+	Instructions: ['0x10af']
+	Instructions: ['nop']
+	Next Instructions: []
+

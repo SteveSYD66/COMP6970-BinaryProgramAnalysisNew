@@ -1,0 +1,140 @@
+0x1000 (4096): (01) ret 	
+0x1001 (4097): (11) nop 	word ptr cs:[eax + eax]
+0x100c (4108): (04) nop 	dword ptr [eax]
+0x1010 (4112): (01) dec 	eax
+0x1011 (4113): (03) sub 	esp, 0x28
+0x1014 (4116): (01) dec 	eax
+0x1015 (4117): (06) mov 	eax, dword ptr [0x33c5]
+0x101b (4123): (02) xor 	ecx, ecx
+0x101d (4125): (06) mov 	dword ptr [eax], 1
+0x1023 (4131): (01) dec 	eax
+0x1024 (4132): (06) mov 	eax, dword ptr [0x33c6]
+0x102a (4138): (06) mov 	dword ptr [eax], 1
+0x1030 (4144): (01) dec 	eax
+0x1031 (4145): (06) mov 	eax, dword ptr [0x33c9]
+0x1037 (4151): (06) mov 	dword ptr [eax], 1
+0x103d (4157): (01) dec 	eax
+0x103e (4158): (06) mov 	eax, dword ptr [0x334c]
+0x1044 (4164): (05) cmp 	word ptr [eax], 0x5a4d
+0x1049 (4169): (02) jne 	0x105a (4186)
+0x104b (4171): (01) dec 	eax
+0x104c (4172): (03) arpl	word ptr [eax + 0x3c], dx
+0x104f (4175): (01) dec 	eax
+0x1050 (4176): (02) add 	eax, edx
+0x1052 (4178): (06) cmp 	dword ptr [eax], 0x4550
+0x1058 (4184): (02) je  	0x10c0 (4288)
+0x105a (4186): (01) dec 	eax
+0x105b (4187): (06) mov 	eax, dword ptr [0x336f]
+0x1061 (4193): (06) mov 	dword ptr [0x5fa5], ecx
+0x1067 (4199): (02) mov 	eax, dword ptr [eax]
+0x1069 (4201): (02) test	eax, eax
+0x106b (4203): (02) je  	0x10b0 (4272)
+0x106d (4205): (05) mov 	ecx, 2
+0x1072 (4210): (05) call	0x25b8 (9656)
+0x1077 (4215): (05) call	0x2540 (9536)
+0x107c (4220): (01) dec 	eax
+0x107d (4221): (06) mov 	edx, dword ptr [0x341d]
+0x1083 (4227): (02) mov 	edx, dword ptr [edx]
+0x1085 (4229): (02) mov 	dword ptr [eax], edx
+0x1087 (4231): (05) call	0x2550 (9552)
+0x108c (4236): (01) dec 	eax
+0x108d (4237): (06) mov 	edx, dword ptr [0x33ed]
+0x1093 (4243): (02) mov 	edx, dword ptr [edx]
+0x1095 (4245): (02) mov 	dword ptr [eax], edx
+0x1097 (4247): (05) call	0x1570 (5488)
+0x109c (4252): (01) dec 	eax
+0x109d (4253): (06) mov 	eax, dword ptr [0x329d]
+0x10a3 (4259): (03) cmp 	dword ptr [eax], 1
+0x10a6 (4262): (02) je  	0x10f8 (4344)
+0x10a8 (4264): (02) xor 	eax, eax
+0x10aa (4266): (01) dec 	eax
+0x10ab (4267): (03) add 	esp, 0x28
+0x10ae (4270): (01) ret 	
+0x10af (4271): (01) nop 	
+0x10b0 (4272): (05) mov 	ecx, 1
+0x10b5 (4277): (05) call	0x25b8 (9656)
+0x10ba (4282): (02) jmp 	0x1077 (4215)
+0x10bc (4284): (04) nop 	dword ptr [eax]
+0x10c0 (4288): (04) movzx	edx, word ptr [eax + 0x18]
+0x10c4 (4292): (05) cmp 	dx, 0x10b
+0x10c9 (4297): (02) je  	0x1110 (4368)
+0x10cb (4299): (05) cmp 	dx, 0x20b
+0x10d0 (4304): (02) jne 	0x105a (4186)
+0x10d2 (4306): (07) cmp 	dword ptr [eax + 0x84], 0xe
+0x10d9 (4313): (06) jbe 	0x105a (4186)
+0x10df (4319): (06) mov 	edx, dword ptr [eax + 0xf8]
+0x10e5 (4325): (02) xor 	ecx, ecx
+0x10e7 (4327): (02) test	edx, edx
+0x10e9 (4329): (03) setne	cl
+0x10ec (4332): (05) jmp 	0x105a (4186)
+0x10f1 (4337): (07) nop 	dword ptr [eax]
+0x10f8 (4344): (01) dec 	eax
+0x10f9 (4345): (06) mov 	ecx, dword ptr [0x33c1]
+0x10ff (4351): (05) call	0x1ce0 (7392)
+0x1104 (4356): (02) xor 	eax, eax
+0x1106 (4358): (01) dec 	eax
+0x1107 (4359): (03) add 	esp, 0x28
+0x110a (4362): (01) ret 	
+0x110b (4363): (05) nop 	dword ptr [eax + eax]
+0x1110 (4368): (04) cmp 	dword ptr [eax + 0x74], 0xe
+0x1114 (4372): (06) jbe 	0x105a (4186)
+0x111a (4378): (01) inc 	esp
+0x111b (4379): (06) mov 	eax, dword ptr [eax + 0xe8]
+0x1121 (4385): (02) xor 	ecx, ecx
+0x1123 (4387): (01) inc 	ebp
+0x1124 (4388): (02) test	eax, eax
+0x1126 (4390): (03) setne	cl
+0x1129 (4393): (05) jmp 	0x105a (4186)
+0x112e (4398): (02) nop 	
+0x1130 (4400): (01) dec 	eax
+0x1131 (4401): (03) sub 	esp, 0x38
+0x1134 (4404): (01) dec 	eax
+0x1135 (4405): (06) mov 	eax, dword ptr [0x3395]
+0x113b (4411): (01) dec 	esp
+0x113c (4412): (06) lea 	eax, [0x5ed6]
+0x1142 (4418): (01) dec 	eax
+0x1143 (4419): (06) lea 	edx, [0x5ed7]
+0x1149 (4425): (01) dec 	eax
+0x114a (4426): (06) lea 	ecx, [0x5ed8]
+0x1150 (4432): (02) mov 	eax, dword ptr [eax]
+0x1152 (4434): (06) mov 	dword ptr [0x5eac], eax
+0x1158 (4440): (01) dec 	eax
+0x1159 (4441): (06) mov 	eax, dword ptr [0x3331]
+0x115f (4447): (01) inc 	esp
+0x1160 (4448): (02) mov 	ecx, dword ptr [eax]
+0x1162 (4450): (01) dec 	eax
+0x1163 (4451): (06) lea 	eax, [0x5e9b]
+0x1169 (4457): (01) dec 	eax
+0x116a (4458): (04) mov 	dword ptr [esp + 0x20], eax
+0x116e (4462): (05) call	0x25a8 (9640)
+0x1173 (4467): (01) nop 	
+0x1174 (4468): (01) dec 	eax
+0x1175 (4469): (03) add 	esp, 0x38
+0x1178 (4472): (01) ret 	
+0x1179 (4473): (07) nop 	dword ptr [eax]
+0x1180 (4480): (01) inc 	ecx
+0x1181 (4481): (01) push	esp
+0x1182 (4482): (01) push	ebp
+0x1183 (4483): (01) push	edi
+0x1184 (4484): (01) push	esi
+0x1185 (4485): (01) push	ebx
+0x1186 (4486): (01) dec 	eax
+0x1187 (4487): (03) sub 	esp, 0x20
+0x118a (4490): (01) dec 	eax
+0x118b (4491): (06) mov 	ebx, dword ptr [0x328f]
+0x1191 (4497): (01) dec 	eax
+0x1192 (4498): (06) mov 	ebp, dword ptr [0x6ff8]
+0x1198 (4504): (02) xor 	edi, edi
+0x119a (4506): (02) dec 	eax
+0x119c (4508): (07) mov 	eax, dword ptr [0x30]
+0x11a3 (4515): (01) dec 	eax
+0x11a4 (4516): (03) mov 	esi, dword ptr [eax + 8]
+0x11a7 (4519): (02) jmp 	0x11c0 (4544)
+0x11a9 (4521): (07) nop 	dword ptr [eax]
+0x11b0 (4528): (01) dec 	eax
+0x11b1 (4529): (02) cmp 	esi, eax
+0x11b3 (4531): (06) je  	0x1320 (4896)
+0x11b9 (4537): (05) mov 	ecx, 0x3e8
+0x11be (4542): (02) call	ebp
+0x11c0 (4544): (01) dec 	eax
+0x11c1 (4545): (02) mov 	eax, edi

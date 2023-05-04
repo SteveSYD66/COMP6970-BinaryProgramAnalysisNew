@@ -1,0 +1,19 @@
+<CsInsn 0x1049 [750f]: jne 0x105a>
+<CsInsn 0x1044 [6681384d5a]: cmp word ptr [eax], 0x5a4d>
+<CsInsn 0x103e [8b054c330000]: mov eax, dword ptr [0x334c]>
+<CsInsn 0x103d [48]: dec eax>
+<CsInsn 0x1037 [c70001000000]: mov dword ptr [eax], 1>
+<CsInsn 0x1031 [8b05c9330000]: mov eax, dword ptr [0x33c9]>
+<CsInsn 0x1030 [48]: dec eax>
+<CsInsn 0x102a [c70001000000]: mov dword ptr [eax], 1>
+<CsInsn 0x1024 [8b05c6330000]: mov eax, dword ptr [0x33c6]>
+<CsInsn 0x1023 [48]: dec eax>
+<CsInsn 0x101d [c70001000000]: mov dword ptr [eax], 1>
+<CsInsn 0x101b [31c9]: xor ecx, ecx>
+<CsInsn 0x1015 [8b05c5330000]: mov eax, dword ptr [0x33c5]>
+<CsInsn 0x1014 [48]: dec eax>
+<CsInsn 0x1011 [83ec28]: sub esp, 0x28>
+<CsInsn 0x1010 [48]: dec eax>
+<CsInsn 0x100c [0f1f4000]: nop dword ptr [eax]>
+<CsInsn 0x1001 [66662e0f1f840000000000]: nop word ptr cs:[eax + eax]>
+<CsInsn 0x1000 [c3]: ret >
